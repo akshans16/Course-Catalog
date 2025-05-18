@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Code Quest</title>
+        <link rel="icon" href="assets/sakura.png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <!-- Nav Bar start -->
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="assets/cherry-tree.png" alt="" />
+                    <p>CodeBloom</p>
+                </div>
+                <button class="toggle-btn" id="theme-toggle">
+                    <img src="assets/moon.png" alt="" />
+                </button>
+            </nav>
+            <!-- Nav Bar End -->
+
+            <div class="intro-container">
+                <!-- hero section -->
+                <div class="hero-section">
+                    <div class="overlay-text">
+                        <div class="headline">CodeBloom</div>
+                        <div class="subheadline">Grow Your Coding Skills. No Cost, Just Code. ✨</div>
+                    </div>
+                </div>
+                <!-- hero section end -->
+
+                <!-- Welcome section -->
+                <div class="welcome-note">
+                    <div class="main-message">
+                        <h4>Level Up Your Skills</h4>
+                        <h4>Shape Your Future</h4>
+                    </div>
+                    <div class="note">
+                        <p>Dive into the world of programming with free, expert-crafted courses for every learner.</p>
+                    </div>
+                </div>
+                <!-- Welcom section ends -->
+            </div>
+
+            <!-- Filter Trigger Button -->
+            <button id="filterTrigger" class="filter-trigger">
+                <i class="fas fa-sliders-h"></i>
+                <span>Filters</span>
+            </button>
+
+            <!-- Filter Popup -->
+            <div id="filterPopup" class="filter-popup hidden">
+                <div class="filter-popup-content">
+                    <!-- Close Button -->
+                    <button id="closeFilter" class="close-button" aria-label="Close filter popup">
+                        <i class="fas fa-times"></i>
+                    </button>
+
+                    <!-- Filter Content -->
+                    <div class="filter-content">
+                        <h2>Filters</h2>
+                        <div class="filter-columns">
+                            <!-- Topic -->
+                            <div class="filter-column">
+                                <h3>Topic</h3>
+                                <div class="filter-options">
+                                    <div class="filter-option" data-category="topic" data-value="web-dev">
+                                        Web Development
+                                    </div>
+                                    <div class="filter-option" data-category="topic" data-value="data-science">
+                                        Data Science
+                                    </div>
+                                    <div class="filter-option" data-category="topic" data-value="tools">Tools</div>
+                                </div>
+                            </div>
+                            <!-- Duration -->
+                            <div class="filter-column">
+                                <h3>Duration</h3>
+                                <div class="filter-options">
+                                    <div class="filter-option" data-category="duration" data-value="short">Short</div>
+                                    <div class="filter-option" data-category="duration" data-value="medium">Medium</div>
+                                    <div class="filter-option" data-category="duration" data-value="long">Long</div>
+                                </div>
+                            </div>
+                            <!-- Difficulty -->
+                            <div class="filter-column">
+                                <h3>Difficulty</h3>
+                                <div class="filter-options">
+                                    <div class="filter-option" data-category="difficulty" data-value="beginner">
+                                        Beginner
+                                    </div>
+                                    <div class="filter-option" data-category="difficulty" data-value="intermediate">
+                                        Intermediate
+                                    </div>
+                                    <div class="filter-option" data-category="difficulty" data-value="advanced">
+                                        Advanced
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Apply Button -->
+                        <div class="apply-button-wrapper">
+                            <button id="applyFilters" class="apply-button">Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- topic-name -->
+            <div id="activeFilters" class="active-filters"></div>
+            <!-- Catalog Start -->
+            <div class="catalog">
+                <!-- Card One -->
+                <div
+                    class="card"
+                    data-topic="web-dev"
+                    data-duration="3"
+                    data-difficulty="1"
+                    data-link="https://www.simplilearn.com/front-end-developer-free-course-skillup"
+                >
+                    <div class="picture">
+                        <img src="assets/pixel images/pixelArt12.jpg" alt="course image" />
+                    </div>
+                    <div class="description">
+                        <h5>Course</h5>
+                        <h4>Front-End Web Development</h4>
+                        <div class="snippet">
+                            Master front-end basics with Simplilearn’s beginner course in HTML, CSS, and JS.
+                        </div>
+                        <div class="card_footer">
+                            <div class="difficulty">
+                                <p>BEGINNER</p>
+                            </div>
+                            <div class="source">
+                                <p>Source - Simplilearn</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Two -->
+
+                <div
+                    class="card"
+                    data-topic="web-dev"
+                    data-duration="2"
+                    data-difficulty="1"
+                    data-link="https://www.udemy.com/course/learn-html-css-website/?srsltid=AfmBOoqyb-OOnq0ib29yFaAWHJRuKaoBe6twewUPA-qu3Qovz-ZDbN9W"
+                >
+                    <div class="picture">
+                        <img src="assets/pixel images/pixelArt11.jpg" alt="course image" />
+                    </div>
+                    <div class="description">
+                        <h5>Course</h5>
+                        <h4>HTML & CSS for Beginners</h4>
+                        <div class="snippet">Start your web dev journey with HTML and CSS for Beginners on Udemy.</div>
+                        <div class="card_footer">
+                            <div class="difficulty">
+                                <p>BEGINNER</p>
+                            </div>
+                            <div class="source">
+                                <p>Source - Udemy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Three -->
+
+                <div
+                    class="card"
+                    data-topic="web-dev"
+                    data-duration="1"
+                    data-difficulty="1"
+                    data-link="https://youtu.be/qz0aGYrrlhU?si=eeKLASBFjhiN9vG7"
+                >
+                    <div class="picture">
+                        <img src="assets/pixel images/pixelArt10.jpg" alt="course image" />
+                    </div>
+                    <div class="description">
+                        <h5>Course</h5>
+                        <h4>HTML Full Course</h4>
+                        <div class="snippet">
+                            Learn HTML from scratch with this beginner-friendly full course on YouTube.
+                        </div>
+                        <div class="card_footer">
+                            <div class="difficulty">
+                                <p>BEGINNER</p>
+                            </div>
+                            <div class="source">
+                                <p>Source - YouTube</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Four -->
+
+                <div
+                    class="card"
+                    data-topic="web-dev"
+                    data-duration="3"
+                    data-difficulty="1"
+                    data-link="https://www.freecodecamp.org/learn/2022/responsive-web-design/"
+                >
+                    <div class="picture">
+                        <img src="assets/pixel images/pixelArt9.jpg" alt="course image" />
+                    </div>
+                    <div class="description">
+                        <h5>Course</h5>
+                        <h4>Responsive Web Design Certification</h4>
+                        <div class="snippet">
+                            Earn a free beginner certification in responsive web design from freeCodeCamp.
+                        </div>
+                        <div class="card_footer">
+                            <div class="difficulty">
+                                <p>BEGINNER</p>
+                            </div>
+                            <div class="source">
+                                <p>Source - freecodecamp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Five -->
+
+                <div
+                    class="card"
+                    data-topic="web-dev"
+                    data-duration="1"
+                    data-difficulty="2"
+                    data-link="https://youtu.be/w7ejDZ8SWv8?si=ZbdklfSzTDYTNowq"
+                >
+                    <div class="picture">
+                        <img src="assets/pixel images/pixelArt19.jpg" alt="course image" />
+                    </div>
+                    <div class="description">
+                        <h5>Course</h5>
+                        <h4>React JS Crash Course</h4>
+                        <div class="snippet">
+                            Jump into React with this quick crash course for beginners on YouTube.
+                        </div>
+                        <div class="card_footer">
+                            <div class="difficulty">
+                                <p>INTERMEDIATE</p>
+                            </div>
+                            <div class="source">
+                                <p>Source - YouTube</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Six -->
+
+                <div
+                    class="card"
+                    data-topic="web-dev"
+                    data-duration="3"
+                    data-difficulty="3"
+                    data-link="https://youtu.be/Bvwq_S0n2pk?si=q_kaLoSaQympc8yu"
+                >
+                    <div class="picture">
+                        <img src="assets/pixel images/pixelArt16.jpg" alt="course image" />
+                    </div>
+                    <div class="description">
+                        <h5>Course</h5>
+                        <h4>Full React Course</h4>
+                        <div class="snippet">
+                            Complete beginner React tutorial covering everything from setup to deployment on YouTube.
+                        </div>
+                        <div class="card_footer">
+                            <div class="difficulty">
+                                <p>ADVANCE</p>
+                            </div>
+                            <div class="source">
+                                <p>Source - YouTube</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card seven -->
+                <div
+                    class="card"
+                    data-topic="data-science"
+                    data-duration="2"
+                    data-difficulty="1"
+                    data-link="https://www.w3schools.com/sql/"
+                >
+                    <div class="picture">
+                        <img src="assets/pixel images/pixelArt18.jpg" alt="course image" />
+                    </div>
+                    <div class="description">
+                        <h5>Course</h5>
+                        <h4>SQL Tutorial</h4>
+                        <div class="snippet">
+                            Learn SQL fundamentals step-by-step with this W3Schools beginner tutorial.
+                        </div>
+                        <div class="card_footer">
+                            <div class="difficulty">
+                                <p>BEGINNER</p>
+                            </div>
+                            <div class="source">
+                                <p>Source - W3Schools</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card eight -->
+
+                <div
+                    class="card"
+                    data-topic="data-science"
+                    data-duration="2"
+                    data-difficulty="1"
+                    data-link="https://youtu.be/OT1RErkfLNQ?si=TEULcEKtXxnEurEV"
+                >
+                    <div class="picture">
+                        <img src="assets/pixel images/pixelArt4.jpg" alt="course image" />
+                    </div>
+                    <div class="description">
+                        <h5>Course</h5>
+                        <h4>Learn SQL Beginner to Advanced</h4>
+                        <div class="snippet">
+                            Go from beginner to pro in SQL with this full YouTube course for all levels.
+                        </div>
+                        <div class="card_footer">
+                            <div class="difficulty">
+                                <p>BEGINNER</p>
+                            </div>
+                            <div class="source">
+                                <p>Source - Youtube</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Nine -->
+
+                <div
+                    class="card"
+                    data-topic="data-science"
+                    data-duration="3"
+                    data-difficulty="1"
+                    data-link="https://www.geeksforgeeks.org/courses/python-course-certification-free"
+                >
+                    <div class="picture">
+                        <img src="assets/pixel images/pixelArt15.jpg" alt="course image" />
+                    </div>
+                    <div class="description">
+                        <h5>Course</h5>
+                        <h4>Python Course with Certificate</h4>
+                        <div class="snippet">
+                            Start learning Python and earn a certificate with this beginner course from GFG.
+                        </div>
+                        <div class="card_footer">
+                            <div class="difficulty">
+                                <p>BEGINNER</p>
+                            </div>
+                            <div class="source">
+                                <p>Source - GeeksForGeeks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Ten -->
+
+                <div
+                    class="card"
+                    data-topic="data-science"
+                    data-duration="2"
+                    data-difficulty="2"
+                    data-link="https://www.youtube.com/watch?v=HGOBQPFzWKo"
+                >
+                    <div class="picture">
+                        <img src="assets/pixel images/pixelArt2.jpg" alt="course image" />
+                    </div>
+                    <div class="description">
+                        <h5>Course</h5>
+                        <h4>Intermediate Python Programming</h4>
+                        <div class="snippet">
+                            Improve your Python skills with this intermediate-level course for beginners on YouTube.
+                        </div>
+                        <div class="card_footer">
+                            <div class="difficulty">
+                                <p>INTERMEDIATE</p>
+                            </div>
+                            <div class="source">
+                                <p>Source - YouTube</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Eleven -->
+
+                <div
+                    class="card"
+                    data-topic="data-science"
+                    data-duration="2"
+                    data-difficulty="2"
+                    data-link="https://youtu.be/9DhZ-JCWvDw?si=SAfjeCG9pRxYS0g2"
+                >
+                    <div class="picture">
+                        <img src="assets/pixel images/pixelArt1.jpg" alt="course image" />
+                    </div>
+                    <div class="description">
+                        <h5>Course</h5>
+                        <h4>NumPy For Data Science</h4>
+                        <div class="snippet">
+                            Learn NumPy basics for data science in this beginner-focused YouTube course.
+                        </div>
+                        <div class="card_footer">
+                            <div class="difficulty">
+                                <p>INTERMEDIATE</p>
+                            </div>
+                            <div class="source">
+                                <p>Source - Youtube</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Tweleve -->
+
+                <div
+                    class="card"
+                    data-topic="tools"
+                    data-duration="2"
+                    data-difficulty="1"
+                    data-link="https://youtu.be/q8EevlEpQ2A?si=_fuh57htHsVVrqPr"
+                >
+                    <div class="picture">
+                        <img src="assets/pixel images/pixelArt6.jpg" alt="course image" />
+                    </div>
+                    <div class="description">
+                        <h5>Course</h5>
+                        <h4>Complete git and github course in hindi</h4>
+                        <div class="snippet">
+                            Get started with Git and GitHub in this beginner tutorial designed for developers on
+                            YouTube.
+                        </div>
+                        <div class="card_footer">
+                            <div class="difficulty">
+                                <p>BEGINNER</p>
+                            </div>
+                            <div class="source">
+                                <p>Source - Youtube</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Catalog end -->
+
+            <!-- footer -->
+            <footer class="site-footer">
+                <div class="footer-container">
+                    <p class="footer-tagline">Built with ❤️ by Akshansh</p>
+
+                    <div class="footer-links">
+                        <a href="#">About</a>
+                        <a href="#">Privacy-Policy</a>
+                        <a href="#">Contact</a>
+                    </div>
+
+                    <div class="footer-socials">
+                        <a href="#" title="Twitter">
+                            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
+                        </a>
+
+                        <a href="#" title="GitHub">
+                            <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
+                        </a>
+
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" title="LinkedIn">
+                            <img
+                                src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                                alt="LinkedIn"
+                                style="width: 24px; height: 24px"
+                            />
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" title="Instagram">
+                            <img
+                                src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+                                alt="Instagram"
+                                style="width: 24px; height: 24px"
+                            />
+                        </a>
+                    </div>
+
+                    <p class="footer-copy">&copy; 2025 CodeBloom. All rights reserved.</p>
+                </div>
+            </footer>
+        </div>
+        <script src="app.js"></script>
+        <script src="filter.js"></script>
+    </body>
+</html>
