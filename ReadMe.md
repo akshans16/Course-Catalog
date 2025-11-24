@@ -4,6 +4,10 @@ CodeBloom is a free, interactive course catalog web app designed to help users d
 
 ---
 
+Live Link - https://earnest-youtiao-8b9b29.netlify.app/
+
+---
+
 ## Preview
 
 ![Course Catalog Preview 1](assets/preview1.png)
